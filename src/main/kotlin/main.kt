@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
 
      */
 
-    fun Random.nextInt(range: IntRange): Int {
+   /* fun Random.nextInt(range: IntRange): Int {
         return range.start + nextInt(range.last - range.start)
     }
     for (numero in Ejercicio2(10,Random.nextInt(50..250)).tabla6)
@@ -15,5 +15,6 @@ fun main(args: Array<String>) {
 
     val array = Ejercicio2(10){ Random.nextInt(50, 250)}
 
+    */
 
-}
+    val array2 = Ejercicio3().listaFiltrada(Ejercicio2(10, {Random.nextInt(50, 250)}).tabla6
