@@ -1,12 +1,19 @@
 import java.util.*
+import kotlin.random.nextInt
 
 fun main(args: Array<String>) {
     /**
-     * Bucle que recorre la instancia del array declarado en la clase Ejericio1
-     * y lo muestra por pantalla
+     * No me importa import kotlin.random.nextInt, no se por que no funciona
+
      */
 
-    for ( mutliplicacion in Ejercicio1(10).tabla6)
-        println(mutliplicacion)
+    fun Random.nextInt(range: IntRange): Int {
+        return range.start + nextInt(range.last - range.start)
+    }
+    for (numero in Ejercicio2(10,Random.nextInt(50..250)).tabla6)
+        println(numero)
+
+    val array = Ejercicio2(10){ Random.nextInt(50, 250)}
+
 
 }
